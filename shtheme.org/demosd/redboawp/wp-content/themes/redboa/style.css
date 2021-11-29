@@ -1,0 +1,442 @@
+/*
+Theme Name: Redboa
+Theme URI: http://shtheme.com/demosd/redboa
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Description: In 2021, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: redboa
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+.blog .cont p,
+.post .cont p {
+    color: #333;
+}
+
+.dark-blog .cont p {
+    color: #999;
+}
+
+.dark-blog .post-img img {
+    height: 305px;
+}
+
+.widget_categories ul li a,
+.side-bar .widget .recent a,
+.side-bar .search form input,
+.side-bar .search form button {
+    color: #333;
+}
+
+.post .comments .cont span,
+.post .add-comment .cont span,
+.comment-respond form#contact-form textarea,
+.comment-respond form#contact-form input {
+    color: #333;
+}
+
+.comment-respond form#contact-form input[type="submit"] {
+    color: #fff;
+}
+
+.comment-respond form#contact-form textarea {
+    box-shadow: none;
+}
+
+.comment-form-cookies-consent {
+    display: none;
+}
+
+.comment-respond form>div.col-md-12,
+.comment-respond form>div.col-md-6 {
+    padding-left: 0px;
+}
+
+.comment-respond form>div.col-md-6 {
+    display: inline-block;
+    width: 49.7%;
+}
+
+.comment-respond form input[type="submit"] {
+    font-family: 'Pirata One', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 21px;
+    padding: 12px 32px;
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 3;
+    -webkit-box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+    box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+    outline: none !important;
+    overflow: hidden;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+    background: #991b1f;
+}
+
+.comment-respond form input[type="submit"] {
+    font-family: 'Pirata One', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 21px;
+    padding: 12px 32px;
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 3;
+    -webkit-box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+    box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+    outline: none !important;
+    overflow: hidden;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+    background: #991b1f;
+    color: #fff;
+    width: auto;
+    margin-top: 10px;
+}
+
+.comment-respond form input[type="submit"]:hover {
+    background: #000;
+}
+
+h3.comment-reply-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+    color: #000;
+    font-weight: 400;
+    font-family: 'Pirata One', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logged-in h3.comment-reply-title {
+    margin-bottom: 15px;
+}
+
+h3.comment-reply-title:after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: #991b1f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+p.logged-in-as {
+    color: #000;
+    margin: 20px 0;
+    letter-spacing: 0.3px;
+    font-size: 16px;
+}
+
+.side-bar h3.widget-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    color: #000;
+    font-weight: 400;
+    font-family: 'Pirata One', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.side-bar h3.widget-title:after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: #991b1f;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.single-widget {
+    width: 100%;
+}
+
+.widget_categories,
+.widget_tag_cloud {
+    padding-left: 15px;
+}
+
+.widget_categories ul {
+    margin-top: 15px;
+}
+
+.widget_categories ul li {
+    margin-bottom: 10px;
+}
+
+.widget_categories ul li a:before {
+    content: "\e724";
+    font-size: 10px;
+    margin-right: 10px;
+    color: #991b1f;
+    font-family: 'themify';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul.wp-tag-cloud li {
+    font-size: 14px;
+    margin: 3px !important;
+    padding: 5px 15px;
+    background-color: #991b1f;
+    color: #fff !important;
+    float: left;
+}
+
+ul.wp-tag-cloud li:hover {
+    background-color: #1b1b1b;
+}
+
+ul.wp-tag-cloud li a {
+    font-size: 14px !important;
+}
+
+div.comments div.cont h6 a.url {
+    text-transform: capitalize;
+}
+
+a.comment-reply-link {
+    float: right;
+    color: #000;
+    font-size: 15px;
+}
+
+a.comment-reply-link:hover {
+    color: #991b1f;
+}
+
+.single-widget.widget_search {
+    margin-bottom: 0px;
+}
+
+.single-widget {
+    margin-bottom: 50px;
+}
+
+.blog .item .post-img {
+    max-width: 96%;
+}
+
+div.desc {
+    padding-bottom: 15px;
+    text-transform: capitalize;
+    color: #000;
+    letter-spacing: 0.5px;
+}
+
+.blog .item {
+    margin-bottom: 50px;
+}
+
+.blog .item .cont {
+    padding-top: 20px;
+}
+
+a[rel="author"]:hover {
+    color: #991b1f;
+}
+
+.distance {
+    margin: 0 3px;
+}
+
+.blog .item .more {
+    margin-top: 5px;
+    font-size: 22px;
+}
+
+.redboa-pagination-wrap li a:hover {
+    border: none;
+}
+
+.redboa-pagination-wrap li span {
+    font-family: 'Pirata One', cursive;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 400;
+    border-radius: 50%;
+    opacity: 1;
+    text-decoration: none;
+    box-shadow: 0px 16px 28px 0px rgb(0 0 0 / 20%);
+    background-color: #991b1f;
+    color: #fff;
+}
+
+.white-text {
+    color: #999 !important;
+}
+
+.error-section {
+    height: calc(80vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.error-page-content {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.error-page-content h1 {
+    font-size: 10rem;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+.error-page-content h2 {
+    font-size: 45px;
+    line-height: 1.5em;
+}
+
+.error-page-content div.text {
+    font-size: 17px;
+    line-height: 3rem;
+    color: #333;
+}
+
+.error-page-content a.theme-btn {
+    font-family: 'Pirata One', cursive;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 21px;
+    padding: 12px 32px;
+    border: 1px solid transparent;
+    position: relative;
+    z-index: 3;
+    -webkit-box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+    box-shadow: 0px 10px 30px rgb(0 0 0 / 10%);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    cursor: pointer;
+    outline: none !important;
+    overflow: hidden;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+    background: #991b1f;
+    color: #fff;
+    width: auto;
+    margin-top: 20px;
+}
+
+.error-page-content a.theme-btn:hover {
+    background: #000;
+}
+
+.search-custom {
+    margin-bottom: 60px;
+    padding-left: 15px;
+}
+
+.search-custom h4 {
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+
+.search-custom form {
+    position: relative;
+    width: 80%;
+}
+
+.search-custom form input {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    background: #f6f6f6;
+    color: #333;
+}
+
+.search-custom form button[type="submit"] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    color: #999;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-appearance: button;
+}
+
+@media (min-width: 1200px) {
+    .portfolio .gallery.full-width {
+        height: 430px !important;
+    }
+    .portfolio .gallery.full-width>div.col-md-4:nth-child(4) {
+        left: 0px !important;
+    }
+    .portfolio .gallery.full-width>div.col-md-4:nth-child(4),
+    .portfolio .gallery.full-width>div.col-md-4:nth-child(5),
+    .portfolio .gallery.full-width>div.col-md-4:nth-child(6) {
+        top: 215px !important;
+    }
+}
+
+@media (min-width: 1500px) {
+    .portfolio .gallery.full-width {
+        height: 460px !important;
+    }
+    .portfolio .gallery.full-width>div.col-md-4:nth-child(4),
+    .portfolio .gallery.full-width>div.col-md-4:nth-child(5),
+    .portfolio .gallery.full-width>div.col-md-4:nth-child(6) {
+        top: 230px !important;
+    }
+}
+
+.post .item .spical {
+    margin-left: 0px;
+}
